@@ -75,4 +75,4 @@ tidydata<-merge(activity,tidydata,by="activityid",all.x=T)
 #Ordering the tidied data set
 tidydata<-tidydata[order(tidydata$activityid,tidydata$subjectid),]
 #Writing the data output
-write.table(tidydata,"./Assignment110620/tidySet.txt",row.names=F)
+write.table(tidydata[,-(3:4)],"./Assignment110620/tidySet.txt",row.names=F)
